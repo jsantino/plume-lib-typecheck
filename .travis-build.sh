@@ -13,4 +13,5 @@ export CHECKERFRAMEWORK=$ROOT/checker-framework
 ## Obtain plume-lib
 (cd $ROOT && git clone https://github.com/plume-lib-check-index.git)
 
-make -C $ROOT/plume-lib/java JAVACHECK_ARGS="-processor org.checkerframework.checker.index.IndexChecker" check-types
+make -C $ROOT/plume-lib/java JAVACHECK_ARGS="-source 7 -target 7 -Xlint:-options -Awarns -implicit:class -Xlint:-processing -AcheckPurityAnnotations -processor org.checkerframework.checker.index.IndexChecker" check-types
+
