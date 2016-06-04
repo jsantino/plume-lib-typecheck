@@ -5,7 +5,7 @@ ROOT=$TRAVIS_BUILD_DIR/..
 set -e
 
 ## Build Checker Framework
-(cd $ROOT && git clone https://github.com/gyhughes/checker-framework.git && git checkout b9f9edb379906e5fabec2ef8b892451cd2136ca9)
+(cd $ROOT && git clone https://github.com/gyhughes/checker-framework.git)
 # This also builds annotation-tools and jsr308-langtools
 (cd $ROOT/checker-framework/ && ./.travis-build-without-test.sh)
 export CHECKERFRAMEWORK=$ROOT/checker-framework
